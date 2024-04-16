@@ -6,17 +6,32 @@ const closeBtn = document.querySelector(".close-btn")
 
 const myLibrary = []
 
-function Book(id,title, author, pages, read){
-    this.id= id;
-    this.title= title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+// function Book(id,title, author, pages, read){
+//     this.id= id;
+//     this.title= title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+// Book.prototype.readStatus = function(){
+//     this.read = !this.read 
+// }
+
+class Book{
+    constructor(id, title, author, pages, read) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    readStatus() {
+        this.read = !this.read
+    }
 }
 
-Book.prototype.readStatus = function(){
-    this.read = !this.read 
-}
+
 
 addBtn.addEventListener("click", ()=>{
     dialog.showModal()
